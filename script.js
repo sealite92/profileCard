@@ -2,7 +2,7 @@ const cardComponent = {
   name: "Nnalue Fabian",
   role: "Software Developer Intern",
   ImageURL: "/inages/WhatsApp Image 2025-01-30 at 11.36.43_4248516a.jpg",
-  bio: "I am a software developer intern at HNG. Learning and getting valuableexperience in building web applications. I am good in Vanilla JavaScript  and a little bit of Angular Js. I am passionate about building scalable applications and solving complex problems.",
+  bio: "I am a software developer intern at HNG. Learning and getting valuable experience in building web applications. I am good in Vanilla JavaScript and a little bit of Angular Js. I am passionate about building scalable applications and solving complex problems.",
   currentLocation: "Awka, Nigeria",
   emailAddress: "nnaluefabian@gmail.com",
   socialLinks: {
@@ -10,14 +10,8 @@ const cardComponent = {
     githubLink: "https://github.com/sealite92",
     linkedin: "https://linkedin.com/in/nnaluefabian",
   },
-  time: function () {
-    const date = new Date();
-    const utc = date.toISOString();
-    return utc; // Added return statement
-  },
 };
 
-console.log(cardComponent.time());
 document.addEventListener("DOMContentLoaded", function () {
   const card = document.querySelector(".card-container");
   const html = `
@@ -27,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </figure>
 
     <h2 data-testid="fullName">${cardComponent.name}</h2>
-    <p data-testid="jobTitle">${cardComponent.role}</p>
+    <p data-testid="jobTitle" class="role">${cardComponent.role}</p>
     <p data-testid="shortBio">${cardComponent.bio}</p>
     <span data-testid="currentLocation">Location: ${
       cardComponent.currentLocation
@@ -61,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </svg>
       </a>
     </div>
-    <span data-testid="currentTimeUTC">${cardComponent.time()}</span>
+<span data-testid="currentTimeUTC">${new Date().toUTCString()}</span>
   
   `;
   card.innerHTML = html;

@@ -8,7 +8,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #e2e2e2;
   color: #6b6969;
-  font-size: 42%;
+  font-size: 45%;
 }
 
 
@@ -88,6 +88,11 @@ img {
   /* Changes color on hover */
 }
 
+
+.role {
+  font-weight: 600;
+}
+
 /* At screen of 750px */
 
 @media screen and (min-width: 450px) {
@@ -98,7 +103,7 @@ img {
 
 @media screen and (min-width: 768px) {
   body {
-    font-size: 50%;
+    font-size: 53%;
   }
 
   .card-container {
@@ -120,7 +125,7 @@ img {
 
 @media screen and (min-width: 1024px) {
   body {
-    font-size: 62.5%;
+    font-size: 65%;
   }
 
   .card-container {
